@@ -18,6 +18,15 @@
     "shared-modules/SDL/SDL_ttf-2.0.11.json",
     {
       "name":"SDL_gfx",
+      "build-options": {
+          "arch": {
+              "aarch64": {
+                   "config-opts": [
+                       "--disable-mmx"
+                   ]
+              }
+          }
+      },
       "sources":[
         {
           "type":"archive",
