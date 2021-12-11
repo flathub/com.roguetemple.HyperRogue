@@ -10,6 +10,10 @@
     "--socket=pulseaudio",
     "--socket=x11"
   ],
+  "cleanup": [
+    "*.a",
+    "*.la"
+  ],
   "modules":[
     "shared-modules/glew/glew.json",
     "shared-modules/glu/glu-9.json",
@@ -18,6 +22,15 @@
     "shared-modules/SDL/SDL_ttf-2.0.11.json",
     {
       "name":"SDL_gfx",
+      "build-options": {
+          "arch": {
+              "aarch64": {
+                   "config-opts": [
+                       "--disable-mmx"
+                   ]
+              }
+          }
+      },
       "sources":[
         {
           "type":"archive",
