@@ -8,7 +8,9 @@
     "--device=all",
     "--share=ipc",
     "--socket=pulseaudio",
-    "--socket=x11"
+    "--socket=x11",
+    "--filesystem=~/hyperrogue.ini:create",
+    "--filesystem=~/hyperrogue.log:create"
   ],
   "cleanup": [
     "*.a",
